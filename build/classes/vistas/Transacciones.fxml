@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="603.0" prefWidth="799.0" style="-fx-background-color: #142428;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.TransaccionesController">
+    <children>
+        <VBox prefWidth="745.0" spacing="10" />
+      <VBox layoutY="-1.0" prefHeight="609.0" prefWidth="162.0" style="-fx-background-color: #001824;">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#vistaInicio" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: trasparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Inicio" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#vistaClientes" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: trasparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Clientes" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#vistaTransacciones" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: trasparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Transacciones" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="92.0" mnemonicParsing="false" onMouseClicked="#vistaReportes" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: trasparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Reportes" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="133.0" mnemonicParsing="false" onMouseClicked="#vistaBitacoras" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: trasparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Bitacora" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="133.0" mnemonicParsing="false" onMouseClicked="#vistaUsuarios" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: trasparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Usuarios" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <TableView fx:id="tablaTrasaccion" layoutX="162.0" layoutY="238.0" prefHeight="370.0" prefWidth="638.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" text="#" />
+          <TableColumn fx:id="colCliente" prefWidth="154.0" text="Cliente" />
+          <TableColumn fx:id="colMonto" prefWidth="95.0" text="Monto" />
+          <TableColumn fx:id="colDescripcion" prefWidth="189.0" text="Descipcion" />
+          <TableColumn fx:id="colFecha" prefWidth="124.0" text="Fecha" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtMonto" alignment="CENTER" layoutX="226.0" layoutY="86.0" prefHeight="31.0" prefWidth="162.0" promptText="Monto">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtDescripcion" layoutX="497.0" layoutY="86.0" prefHeight="41.0" prefWidth="255.0" promptText="Descripcion">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="selTransaccionPersona" layoutX="186.0" layoutY="146.0" prefHeight="31.0" prefWidth="255.0" promptText="Personas" />
+      <Button fx:id="btnRegistrar" layoutX="421.0" layoutY="187.0" mnemonicParsing="false" onAction="#registrarTransaccion" prefHeight="41.0" prefWidth="97.0" text="Registrar">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="selTransaccionEmpresa" layoutX="497.0" layoutY="146.0" prefHeight="31.0" prefWidth="255.0" promptText="Empresas" />
+    </children>
+</AnchorPane>
